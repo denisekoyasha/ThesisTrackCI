@@ -54,18 +54,7 @@ jobs:
           mkdir -p .phpunit.cache
 
       - name: Run PHPUnit tests
-        run: |
-          echo "Running all tests from phpunit.xml..."
-          vendor/bin/phpunit --configuration phpunit.xml --testdox --colors=always
-
-          echo "Running individual unit tests..."
-          vendor/bin/phpunit tests/DatabaseTest.php --testdox --colors=always
-          vendor/bin/phpunit tests/FileUploadTest.php --testdox --colors=always
-          vendor/bin/phpunit tests/LoginTest.php --testdox --colors=always
-          vendor/bin/phpunit tests/RegistrationTest.php --testdox --colors=always
-          vendor/bin/phpunit tests/SessionManagementTest.php --testdox --colors=always
-          vendor/bin/phpunit tests/UtilityFunctionsTest.php --testdox --colors=always
-          vendor/bin/phpunit tests/AuthTest.php --testdox --colors=always
+        run: vendor/bin/phpunit --configuration phpunit.xml --testdox --colors=always
         env:
           DB_HOST: 127.0.0.1
           DB_NAME: thesis_track
