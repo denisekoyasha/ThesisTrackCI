@@ -98,8 +98,8 @@ function sanitize($data) {
     if ($data === null) {
         return null;
     }
-    $data = trim($data);
     $data = stripslashes($data);
+    $data = trim($data);
     return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
 }
 
