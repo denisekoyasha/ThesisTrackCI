@@ -4,27 +4,29 @@ namespace Tests;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Login tests (minimal, CI-friendly)
+ * Login tests
  * - Uses FakePDO created by db/db.php when APP_ENV=testing
- * - Simulates the core login flow without requiring real redirects or a real DB
+ * - Simulates the core login flow without real redirects or a real DB
+ * - Avoids removed PHPUnit APIs (e.g., withConsecutive)
  */
 class LoginTest extends TestCase
 {
     protected function setUp(): void
     {
-        // Enable testing mode so db.php constructs FakePDO
+        // Ensure testing mode so db.php creates FakePDO
         putenv('APP_ENV=testing');
 
-        // Clean session / globals
+        // Reset session / globals
         if (session_status() === PHP_SESSION_ACTIVE) {
             session_unset();
             session_destroy();
         }
+
         $_SESSION = [];
         $_POST = [];
         $_SERVER['REQUEST_METHOD'] = 'GET';
 
-        // Require db.php which will create $pdo (FakePDO) in testing mode
+        // Require db.php which creates $pdo (FakePDO) in testing mode
         require_once __DIR__ . '/../db/db.php';
 
         // Ensure FakePDO is available
@@ -33,19 +35,20 @@ class LoginTest extends TestCase
 
     protected function tearDown(): void
     {
-        putenv('APP_ENV'); // unset
+        // Clean up environment
+        putenv('APP_ENV');
         $_SESSION = [];
         $_POST = [];
         $_SERVER['REQUEST_METHOD'] = 'GET';
     }
 
     /**
-     * Minimal simulation of login handling logic used by the app.
+     * Simulates the core login logic.
      * Returns ['success' => bool, 'error' => ?string, 'session' => ?array]
      */
     private function simulateLoginFlow(object $pdo, string $email, string $password): array
     {
-        // sanitize() is defined in db.php; fallback if missing
+        // Sanitize email
         if (function_exists('sanitize')) {
             $email = sanitize($email);
         } else {
@@ -53,7 +56,11 @@ class LoginTest extends TestCase
         }
 
         if (empty($email) || empty($password)) {
-            return ['success' => false, 'error' => 'Please fill in all fields.', 'session' => null];
+            return [
+                'success' => false,
+                'error' => 'Please fill in all fields.',
+                'session' => null
+            ];
         }
 
         try {
@@ -62,7 +69,11 @@ class LoginTest extends TestCase
             $student = $stmt->fetch();
 
             if (!$student) {
-                return ['success' => false, 'error' => 'No user found with that email.', 'session' => null];
+                return [
+                    'success' => false,
+                    'error' => 'No user found with that email.',
+                    'session' => null
+                ];
             }
 
             if (password_verify($password, $student['password'])) {
@@ -72,14 +83,31 @@ class LoginTest extends TestCase
                     'student_id' => $student['student_id'] ?? null,
                     'name' => trim(($student['first_name'] ?? '') . ' ' . ($student['last_name'] ?? '')),
                     'email' => $student['email'] ?? null,
+                    'course' => $student['course'] ?? null,
+                    'section' => $student['section'] ?? null,
+                    'year_level' => $student['year_level'] ?? null,
+                    'profile_picture' => $student['profile_picture'] ?? null,
                     'requires_password_change' => $student['requires_password_change'] ?? 0
                 ];
-                return ['success' => true, 'error' => null, 'session' => $session];
+
+                return [
+                    'success' => true,
+                    'error' => null,
+                    'session' => $session
+                ];
             }
 
-            return ['success' => false, 'error' => 'Incorrect password.', 'session' => null];
+            return [
+                'success' => false,
+                'error' => 'Incorrect password.',
+                'session' => null
+            ];
         } catch (\Throwable $e) {
-            return ['success' => false, 'error' => 'Login exception: ' . $e->getMessage(), 'session' => null];
+            return [
+                'success' => false,
+                'error' => 'Login exception: ' . $e->getMessage(),
+                'session' => null
+            ];
         }
     }
 
@@ -92,13 +120,17 @@ class LoginTest extends TestCase
             'last_name' => 'Doe',
             'email' => 'john@example.com',
             'password' => password_hash('password123', PASSWORD_DEFAULT),
+            'course' => 'BSCS',
+            'section' => '4A',
+            'year_level' => '4',
+            'profile_picture' => null,
             'requires_password_change' => 1
         ];
 
         /** @var \FakePDO $pdo */
         $pdo = $GLOBALS['pdo'];
-        $key = md5("SELECT * FROM students WHERE email = ?");
-        $pdo->setMockResult($key, [$studentData]);
+        $queryKey = md5("SELECT * FROM students WHERE email = ?");
+        $pdo->setMockResult($queryKey, [$studentData]);
 
         $result = $this->simulateLoginFlow($pdo, 'john@example.com', 'password123');
 
@@ -106,6 +138,7 @@ class LoginTest extends TestCase
         $this->assertNull($result['error']);
         $this->assertIsArray($result['session']);
         $this->assertEquals(1, $result['session']['user_id']);
+        $this->assertEquals('student', $result['session']['role']);
         $this->assertEquals('john@example.com', $result['session']['email']);
         $this->assertEquals(1, $result['session']['requires_password_change']);
     }
@@ -114,8 +147,9 @@ class LoginTest extends TestCase
     {
         /** @var \FakePDO $pdo */
         $pdo = $GLOBALS['pdo'];
-        $key = md5("SELECT * FROM students WHERE email = ?");
-        $pdo->setMockResult($key, []); // explicitly no result
+
+        $queryKey = md5("SELECT * FROM students WHERE email = ?");
+        $pdo->setMockResult($queryKey, []); // no result
 
         $result = $this->simulateLoginFlow($pdo, 'nonexistent@example.com', 'password123');
 
@@ -134,8 +168,9 @@ class LoginTest extends TestCase
 
         /** @var \FakePDO $pdo */
         $pdo = $GLOBALS['pdo'];
-        $key = md5("SELECT * FROM students WHERE email = ?");
-        $pdo->setMockResult($key, [$studentData]);
+
+        $queryKey = md5("SELECT * FROM students WHERE email = ?");
+        $pdo->setMockResult($queryKey, [$studentData]);
 
         $result = $this->simulateLoginFlow($pdo, 'john@example.com', 'wrongpassword');
 
@@ -170,8 +205,9 @@ class LoginTest extends TestCase
 
         /** @var \FakePDO $pdo */
         $pdo = $GLOBALS['pdo'];
-        $key = md5("SELECT * FROM students WHERE email = ?");
-        $pdo->setMockResult($key, [$studentData]);
+
+        $queryKey = md5("SELECT * FROM students WHERE email = ?");
+        $pdo->setMockResult($queryKey, [$studentData]);
 
         $result = $this->simulateLoginFlow($pdo, 'alice@example.com', 'temppassword');
 
