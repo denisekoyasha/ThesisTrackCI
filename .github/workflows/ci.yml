@@ -53,8 +53,9 @@ jobs:
           mkdir -p tests/test_uploads
           mkdir -p .phpunit.cache
 
-      - name: Run PHPUnit tests
-        run: vendor/bin/phpunit --configuration phpunit.xml --testdox --colors=always
+      - name: Run all PHPUnit tests
+        run: |
+          vendor/bin/phpunit --configuration phpunit.xml --testdox --colors=always tests/
         env:
           DB_HOST: 127.0.0.1
           DB_NAME: thesis_track
