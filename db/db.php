@@ -52,6 +52,7 @@ if (getenv('APP_ENV') === 'testing') {
 
     // Create global fake PDO object
     $pdo = new FakePDO();
+    $GLOBALS['pdo'] = $pdo;  // ← ADD THIS LINE
     $conn = null; // not used in tests
 
 } else {
@@ -77,6 +78,9 @@ if (getenv('APP_ENV') === 'testing') {
 
         $pdo->query('SELECT 1');
 
+        // Make PDO available globally for consistency
+        $GLOBALS['pdo'] = $pdo;  // ← ADD THIS LINE TOO (optional but recommended)
+
     } catch (PDOException $e) {
         error_log("Database connection failed: " . $e->getMessage());
 
@@ -89,6 +93,7 @@ if (getenv('APP_ENV') === 'testing') {
         }
     }
 }
+
 function sanitize($data) {
     if ($data === null) {
         return null;
@@ -101,7 +106,6 @@ function sanitize($data) {
 function validateEmail($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
 }
-
 
 function generatePassword($length = 12) {
     $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
