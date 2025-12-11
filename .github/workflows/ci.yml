@@ -1,6 +1,4 @@
 # GitHub Actions CI Workflow for ThesisTrack
-# Runs PHPUnit tests on push/PR - handles PHP >= 8.2 compatibility
-
 name: ThesisTrack CI
 
 on:
@@ -17,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: ['8.2', '8.3']
+        php-version: ['8.1', '8.2', '8.3']
 
     steps:
       - name: Checkout repository
@@ -41,7 +39,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
           restore-keys: ${{ runner.os }}-composer-
 
       - name: Install dependencies
@@ -53,29 +51,34 @@ jobs:
           mkdir -p tests/test_uploads
           mkdir -p .phpunit.cache
 
-      - name: Run PHPUnit tests
-        run: vendor/bin/phpunit --configuration phpunit.xml --testdox --colors=always
+      - name: Setup database
+        run: |
+          sudo service mysql start
+          mysql -e "CREATE DATABASE IF NOT EXISTS thesis_track;"
+          # optional: import schema if you have a schema.sql
+          # mysql thesis_track < database/schema.sql
+
+      - name: Run Login/Registration/Auth tests
+        run: |
+          vendor/bin/phpunit --colors=always tests/LoginTest.php
+          vendor/bin/phpunit --colors=always tests/RegistrationTest.php
+          vendor/bin/phpunit --colors=always tests/AuthTest.php
+          vendor/bin/phpunit --colors=always tests/SessionManagementTest.php
         env:
           DB_HOST: 127.0.0.1
           DB_NAME: thesis_track
           DB_USER: root
           DB_PASS: ""
 
-  lint:
-    name: PHP Syntax Check
-    runs-on: ubuntu-latest
+      - name: Run Database tests
+        run: vendor/bin/phpunit --colors=always tests/DatabaseTest.php
+        env:
+          DB_HOST: 127.0.0.1
+          DB_NAME: thesis_track
+          DB_USER: root
+          DB_PASS: ""
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          submodules: false
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-
-      - name: Run PHP syntax check
+      - name: Run File/Utility tests
         run: |
-          find . -name "*.php" -not -path "./vendor/*" -print0 | xargs -0 -n1 php -l
+          vendor/bin/phpunit --colors=always tests/FileUploadTest.php
+          vendor/bin/phpunit --colors=always tests/UtilityFunctionsTest.php
