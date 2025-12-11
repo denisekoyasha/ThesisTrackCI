@@ -108,15 +108,26 @@ function validateEmail($email) {
 }
 
 function generatePassword($length = 12) {
-    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
+    $lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    $uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $numbers = '0123456789';
+    $special = '!@#$%^&*';
+    
+    // Ensure at least one character from each set
     $password = '';
-    $charactersLength = strlen($characters);
-
-    for ($i = 0; $i < $length; $i++) {
-        $password .= $characters[rand(0, $charactersLength - 1)];
+    $password .= $lowercase[rand(0, strlen($lowercase) - 1)];
+    $password .= $uppercase[rand(0, strlen($uppercase) - 1)];
+    $password .= $numbers[rand(0, strlen($numbers) - 1)];
+    $password .= $special[rand(0, strlen($special) - 1)];
+    
+    // Fill the rest with random characters from all sets
+    $allCharacters = $lowercase . $uppercase . $numbers . $special;
+    for ($i = 4; $i < $length; $i++) {
+        $password .= $allCharacters[rand(0, strlen($allCharacters) - 1)];
     }
-
-    return $password;
+    
+    // Shuffle to avoid predictable pattern
+    return str_shuffle($password);
 }
 
 ?>
