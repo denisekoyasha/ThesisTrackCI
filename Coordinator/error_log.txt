@@ -1,0 +1,170 @@
+[18-Jul-2025 08:46:07 Europe/Berlin] PHP Warning:  Undefined array key "section_handled" in C:\xampp\htdocs\v5\Coordinator\coordinator_advisor-mngt.php on line 120
+[18-Jul-2025 08:46:17 Europe/Berlin] PHP Warning:  Undefined array key "section_handled" in C:\xampp\htdocs\v5\Coordinator\coordinator_advisor-mngt.php on line 120
+[18-Jul-2025 08:47:00 Europe/Berlin] PHP Warning:  Undefined array key "section_handled" in C:\xampp\htdocs\v5\Coordinator\coordinator_advisor-mngt.php on line 120
+[18-Jul-2025 08:47:56 Europe/Berlin] PHP Warning:  Undefined array key "section_handled" in C:\xampp\htdocs\v5\Coordinator\coordinator_advisor-mngt.php on line 120
+[18-Jul-2025 08:47:58 Europe/Berlin] PHP Warning:  Undefined array key "section_handled" in C:\xampp\htdocs\v5\Coordinator\coordinator_advisor-mngt.php on line 120
+[18-Jul-2025 08:48:31 Europe/Berlin] PHP Warning:  Undefined array key "section_handled" in C:\xampp\htdocs\v5\Coordinator\coordinator_advisor-mngt.php on line 116
+[18-Jul-2025 08:49:48 Europe/Berlin] PHP Warning:  Undefined array key "section_handled" in C:\xampp\htdocs\v5\Coordinator\coordinator_advisor-mngt.php on line 116
+[18-Jul-2025 08:54:30 Europe/Berlin] PHP Warning:  Undefined array key "section_handled" in C:\xampp\htdocs\v5\Coordinator\coordinator_advisor-mngt.php on line 116
+[22-Jul-2025 16:40:02 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 478
+[22-Jul-2025 16:40:02 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 478
+[22-Jul-2025 16:40:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getSortArrows() in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php:479
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 479
+[22-Jul-2025 16:40:08 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 478
+[22-Jul-2025 16:40:08 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 478
+[22-Jul-2025 16:40:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function getSortArrows() in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php:479
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 479
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 489
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 489
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 490
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 490
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 494
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 494
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 495
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 495
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 499
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 499
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 500
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 500
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 504
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 504
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 505
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 505
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 509
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 509
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 510
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 510
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 514
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 514
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 515
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 515
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 519
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 519
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 520
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 520
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 524
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 524
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 525
+[22-Jul-2025 16:42:32 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 525
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 489
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 489
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 490
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 490
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 494
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 494
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 495
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 495
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 499
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 499
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 500
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 500
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 504
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 504
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 505
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 505
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 509
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 509
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 510
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 510
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 514
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 514
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 515
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 515
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 519
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 519
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 520
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 520
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 524
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 524
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 525
+[22-Jul-2025 16:42:33 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 525
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 489
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 489
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 490
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 490
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 494
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 494
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 495
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 495
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 499
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 499
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 500
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 500
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 504
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 504
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 505
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 505
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 509
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 509
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 510
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 510
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 514
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 514
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 515
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 515
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 519
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 519
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 520
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 520
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 524
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 524
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 525
+[22-Jul-2025 16:42:36 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 525
+[25-Jul-2025 06:05:17 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 523
+[25-Jul-2025 06:05:17 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 528
+[25-Jul-2025 06:05:17 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 533
+[25-Jul-2025 06:05:17 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 538
+[25-Jul-2025 06:05:17 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 543
+[25-Jul-2025 06:05:17 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 548
+[25-Jul-2025 06:05:17 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 553
+[25-Jul-2025 06:05:17 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 558
+[25-Jul-2025 06:05:19 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 523
+[25-Jul-2025 06:05:19 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 528
+[25-Jul-2025 06:05:19 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 533
+[25-Jul-2025 06:05:19 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 538
+[25-Jul-2025 06:05:19 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 543
+[25-Jul-2025 06:05:19 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 548
+[25-Jul-2025 06:05:19 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 553
+[25-Jul-2025 06:05:19 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 558
+[25-Jul-2025 06:05:22 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 523
+[25-Jul-2025 06:05:22 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 528
+[25-Jul-2025 06:05:22 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 533
+[25-Jul-2025 06:05:22 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 538
+[25-Jul-2025 06:05:22 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 543
+[25-Jul-2025 06:05:22 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 548
+[25-Jul-2025 06:05:22 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 553
+[25-Jul-2025 06:05:22 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 558
+[25-Jul-2025 06:05:24 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 523
+[25-Jul-2025 06:05:24 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 528
+[25-Jul-2025 06:05:24 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 533
+[25-Jul-2025 06:05:24 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 538
+[25-Jul-2025 06:05:24 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 543
+[25-Jul-2025 06:05:24 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 548
+[25-Jul-2025 06:05:24 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 553
+[25-Jul-2025 06:05:24 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 558
+[25-Jul-2025 06:05:25 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 523
+[25-Jul-2025 06:05:25 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 528
+[25-Jul-2025 06:05:25 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 533
+[25-Jul-2025 06:05:25 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 538
+[25-Jul-2025 06:05:25 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 543
+[25-Jul-2025 06:05:25 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 548
+[25-Jul-2025 06:05:25 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 553
+[25-Jul-2025 06:05:25 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 558
+[25-Jul-2025 06:05:27 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 523
+[25-Jul-2025 06:05:27 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 528
+[25-Jul-2025 06:05:27 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 533
+[25-Jul-2025 06:05:27 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 538
+[25-Jul-2025 06:05:27 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 543
+[25-Jul-2025 06:05:27 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 548
+[25-Jul-2025 06:05:27 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 553
+[25-Jul-2025 06:05:27 Europe/Berlin] PHP Warning:  Undefined variable $search_term in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 558
+[25-Jul-2025 06:09:41 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 318
+[25-Jul-2025 06:09:41 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 318
+[25-Jul-2025 06:09:41 Europe/Berlin] Database error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' a.last_name, a.first_name' at line 10
+[25-Jul-2025 06:09:53 Europe/Berlin] PHP Warning:  Undefined variable $sort_column in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 318
+[25-Jul-2025 06:09:53 Europe/Berlin] PHP Warning:  Undefined variable $sort_order in C:\xampp\htdocs\v6.11 - hehehe done na siguro\v6\Coordinator\coordinator_advisor-mngt.php on line 318
+[25-Jul-2025 06:09:53 Europe/Berlin] Database error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' a.last_name, a.first_name' at line 10

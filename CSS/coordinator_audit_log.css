@@ -1,0 +1,581 @@
+/* =============== [Audit Log Enhanced Styles - Version 14] =============== */
+/* These styles enhance the audit log page without overriding base layout */
+
+/* Updated to use sidebar violet colors (#553c9a, #6b46c1) instead of bright violet */
+:root {
+  --violet-primary: #553c9a;
+  --violet-secondary: #6b46c1;
+  --violet-light: #805ad5;
+  --violet-lighter: #9f7aea;
+  --violet-lightest: #e9d8fd;
+  --violet-dark: #44337a;
+}
+
+/* Made header dark with white text to reduce white background */
+.main-header {
+  background: linear-gradient(135deg, var(--violet-primary), var(--violet-secondary));
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(85, 60, 154, 0.2);
+  border: none;
+}
+
+.main-header h1 {
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.main-header h1 i {
+  font-size: 2rem;
+}
+
+/* Added dark card styling for section titles with white text */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--violet-primary), var(--violet-secondary));
+  padding: 1.25rem 1.5rem;
+  border-bottom: none;
+}
+
+.card h3 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card h3 i {
+  font-size: 1.5rem;
+}
+
+.card-description {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Compact inline filter section without wasted space */
+.filters-section {
+  background: #f8f9fa;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 1rem;
+}
+
+.filters-inline {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.8rem;
+}
+
+/* Compact dropdown and input styling */
+.filter-select,
+.filter-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background: white;
+  min-width: 120px;
+  transition: all 0.2s ease;
+}
+
+.filter-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23495057' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.filter-select:hover,
+.filter-input:hover {
+  border-color: var(--violet-light);
+}
+
+.filter-select:focus,
+.filter-input:focus {
+  outline: none;
+  border-color: var(--violet-primary);
+  box-shadow: 0 0 0 3px rgba(85, 60, 154, 0.1);
+}
+
+/* Compact table controls in single row */
+.table-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.entries-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.entries-select {
+  padding: 0.4rem 1.75rem 0.4rem 0.6rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23495057' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+}
+
+.entries-select:hover {
+  border-color: var(--violet-light);
+}
+
+.entries-select:focus {
+  outline: none;
+  border-color: var(--violet-primary);
+  box-shadow: 0 0 0 3px rgba(85, 60, 154, 0.1);
+}
+
+/* Compact search bar */
+.modern-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modern-search i {
+  position: absolute;
+  left: 0.75rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.search-input {
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background: white;
+  min-width: 250px;
+  transition: all 0.2s ease;
+}
+
+.search-input:hover {
+  border-color: var(--violet-light);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--violet-primary);
+  box-shadow: 0 0 0 3px rgba(85, 60, 154, 0.1);
+}
+
+/* Enhanced table styling with sidebar violet theme */
+.audit-log-table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #dee2e6;
+}
+
+.audit-log-table thead {
+  background: linear-gradient(135deg, var(--violet-primary), var(--violet-secondary));
+}
+
+/* Enhanced table headers to stand out more with background, larger font, and better styling */
+.audit-log-table thead th,
+.sections-table.audit-log-table thead th {
+  background: linear-gradient(135deg, var(--violet-primary), var(--violet-secondary)) !important;
+  color: white !important;
+  font-weight: 800 !important;
+  padding: 1rem 0.75rem !important;
+  text-transform: uppercase !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 1px !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+  border-bottom: 2px solid var(--violet-dark) !important;
+}
+
+.audit-log-table tbody tr {
+  border-bottom: 1px solid #f1f3f5;
+  transition: none;
+}
+
+.audit-log-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.audit-log-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.audit-log-table tbody td {
+  padding: 0.875rem 0.75rem;
+  color: #495057;
+  font-weight: 500;
+  font-size: 0.875rem;
+  white-space: normal;
+}
+
+/* Severity Badges with Icons */
+.severity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.severity-badge i {
+  font-size: 0.75rem;
+}
+
+.severity-low {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.severity-medium {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fbbf24;
+}
+
+.severity-high {
+  background: #fed7aa;
+  color: #9a3412;
+  border: 1px solid #fb923c;
+}
+
+.severity-critical {
+  background: #fecaca;
+  color: #991b1b;
+  border: 1px solid #f87171;
+}
+
+/* Category badges for action categories in audit log table */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.category-system-access {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+.category-account-management {
+  background: var(--violet-lightest);
+  color: var(--violet-dark);
+  border: 1px solid var(--violet-lighter);
+}
+
+.category-chapter-management {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fbbf24;
+}
+
+.category-file-management {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.category-general {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+/* Enhanced role badges with sidebar violet theme */
+.role-badge-small {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.role-coordinator {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+.role-advisor {
+  background: var(--violet-lightest);
+  color: var(--violet-dark);
+  border: 1px solid var(--violet-lighter);
+}
+
+.role-student {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+/* Enhanced action badges */
+.action-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.action-login {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.action-logout {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.action-upload {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+.action-delete {
+  background: #fed7aa;
+  color: #9a3412;
+  border: 1px solid #fb923c;
+}
+
+.action-update {
+  background: var(--violet-lightest);
+  color: var(--violet-dark);
+  border: 1px solid var(--violet-lighter);
+}
+
+.action-create {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fbbf24;
+}
+
+/* Compact button styling */
+.btn-primary {
+  background: linear-gradient(135deg, var(--violet-primary), var(--violet-secondary));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--violet-secondary), var(--violet-dark));
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--violet-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: #f8f9fa;
+  border-color: var(--violet-lighter);
+  transform: translateY(-1px);
+}
+
+/* Compact pagination */
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.pagination .page-link {
+  padding: 0.5rem 0.875rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--violet-dark);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.pagination .page-link:hover {
+  background: var(--violet-lightest);
+  border-color: var(--violet-lighter);
+  color: var(--violet-primary);
+}
+
+.pagination .page-link.active {
+  background: linear-gradient(135deg, var(--violet-primary), var(--violet-secondary));
+  color: white;
+  border-color: var(--violet-primary);
+  pointer-events: none;
+}
+
+/* Compact info box */
+.info-box {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--violet-lightest);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--violet-dark);
+  border: 1px solid #d6bcfa;
+  font-weight: 600;
+}
+
+/* Improved responsive design for better mobile experience */
+@media (max-width: 768px) {
+  .filters-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .table-controls-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    min-width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+  
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.page-header h1 i {
+  color: white;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+  color: white;
+}

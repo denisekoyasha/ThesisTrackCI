@@ -1,0 +1,8 @@
+/* Minimal styles for the session timeout modal */
+#session-warning-modal { position: fixed; top:0; left:0; right:0; bottom:0; z-index:2000; }
+#session-warning-modal .st-modal-overlay { position: absolute; inset:0; background: rgba(0,0,0,0.5); }
+#session-warning-modal .st-modal { position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); background: #fff; padding: 20px; border-radius:8px; box-shadow: 0 6px 24px rgba(0,0,0,0.2); width: 420px; max-width: 90%; }
+#session-warning-modal .st-modal h3{ margin-top:0; }
+#session-warning-modal .st-actions{ text-align:right; margin-top:16px; }
+#session-warning-modal .btn{ background:#3498db; color:#fff; border:none; padding:8px 12px; border-radius:4px; cursor:pointer; }
+#session-warning-modal .btn.btn-danger{ background:#e74c3c; }

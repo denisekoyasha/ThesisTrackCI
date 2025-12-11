@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Preview - ThesisTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .preview-header {
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .preview-header h1 {
+            color: var(--secondary-color);
+            font-size: 24px;
+        }
+
+        .preview-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #1a252f;
+        }
+
+        .preview-container {
+            width: 100%;
+            max-width: 1200px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preview-toolbar {
+            padding: 15px;
+            background: var(--light-color);
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .page-info {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .preview-content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background: #e0e0e0;
+        }
+
+        .document-page {
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 8.5in;
+            height: 11in;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* Border Lines with exact specifications - THINNER SOLID BLACK */
+        .border-line {
+            position: absolute;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* TOP BORDER: horizontal 0.01", vertical 0", height 0.86", width 8.48" */
+        .border-line.top {
+            left: 0.01in;
+            top: 0in;
+            width: 8.48in;
+            height: 0.86in;
+            border: 1px solid #000000;
+        }
+
+        /* 2ND TOP BORDER: horizontal 0.01", vertical 1.27", height 0", width 8.49" */
+        .border-line.top-2 {
+            left: 0.01in;
+            top: 1.27in;
+            width: 8.49in;
+            height: 0in;
+            border-top: 1px solid #000000;
+        }
+
+        /* BOTTOM BORDER: horizontal 0", vertical 10.29", height 0", width 8.49" */
+        .border-line.bottom {
+            left: 0in;
+            top: 10.29in;
+            width: 8.49in;
+            height: 0in;
+            border-top: 1px solid #000000;
+        }
+
+        /* LEFT BORDER: horizontal 0.91", vertical 0", height 11", width 0" */
+        .border-line.left {
+            left: 0.91in;
+            top: 0in;
+            width: 0in;
+            height: 11in;
+            border-left: 1px solid #000000;
+        }
+
+        /* RIGHT BORDER: horizontal 7.64", vertical 0", height 11", width 0" */
+        .border-line.right {
+            left: 7.64in;
+            top: 0in;
+            width: 0in;
+            height: 11in;
+            border-left: 1px solid #000000;
+        }
+
+        /* RIGHT BORDER LINES INSIDE */
+        /* LINE 1: horizontal 7.64", vertical 7.14", height 0", width 0.84" */
+        .border-line.right-inside-1 {
+            left: 7.64in;
+            top: 7.14in;
+            width: 0.84in;
+            height: 0in;
+            border-top: 1px solid #000000;
+        }
+
+        /* LINE 2: horizontal 7.64", vertical 8.8", height 0", width 0.87" */
+        .border-line.right-inside-2 {
+            left: 7.64in;
+            top: 8.8in;
+            width: 0.87in;
+            height: 0in;
+            border-top: 1px solid #000000;
+        }
+
+        /* Content area - NO GREEN BACKGROUND */
+        .content-safe-zone {
+            position: absolute;
+            top: 0.86in;
+            left: 0.91in;
+            right: 0.86in;
+            bottom: 0.71in;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .document-content {
+            position: absolute;
+            top: 0.86in;
+            left: 0.91in;
+            right: 0.86in;
+            bottom: 0.71in;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            z-index: 1;
+        }
+
+        /* Header section between top borders - UPDATED INDENTATION */
+        .header-section {
+            position: absolute;
+            top: 0.86in;
+            left: 0.98in; /* CHANGED: Left indent 0.98" */
+            right: 0.92in; /* CHANGED: Right indent 0.92" */
+            height: 0.41in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .university-header {
+            font-family: "Arial MT", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: normal;
+            text-align: center;
+            color: #000;
+            letter-spacing: 3.1pt;
+        }
+
+        .logo-left, .logo-right {
+            width: 0.3in;
+            height: 0.3in;
+            object-fit: contain;
+        }
+
+        .logo-left {
+            margin-right: 10px;
+        }
+
+        .logo-right {
+            margin-left: 10px;
+        }
+
+        .thesis-title {
+            text-align: center;
+            margin-bottom: 60px;
+            margin-top: 1in;
+        }
+
+        .thesis-title h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .thesis-quote {
+            margin-bottom: 60px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .quote-line {
+            margin-bottom: 5px;
+            font-style: normal;
+        }
+
+        .first-section {
+            margin-bottom: 40px;
+        }
+
+        .second-section {
+            margin-bottom: 20px;
+        }
+
+        .group-members {
+            margin: 40px 0 30px 0;
+            text-align: center;
+        }
+
+        .by-section {
+            margin-top: -15px;
+            margin-bottom: 34px;
+        }
+
+        .by-text {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .group-member {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .submission-date {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Positioning guides for visual reference */
+        .position-guide {
+            position: absolute;
+            pointer-events: none;
+            z-index: 3;
+            opacity: 0.3;
+        }
+
+        .line-1-guide {
+            left: 7.64in;
+            top: 7.14in;
+            width: 0.84in;
+            height: 0in;
+            border-top: 2px solid black;
+        }
+
+        .line-2-guide {
+            left: 7.64in;
+            top: 8.8in;
+            width: 0.87in;
+            height: 0in;
+            border-top: 2px solid black;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .preview-header, .preview-toolbar {
+                display: none;
+            }
+            
+            .preview-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .document-page {
+                box-shadow: none;
+                margin: 0;
+            }
+            
+            .border-line, .content-safe-zone, .position-guide {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .preview-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .document-page {
+                transform: scale(0.7);
+                transform-origin: top center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preview Header -->
+    <div class="preview-header">
+        <h1><i class="fas fa-file-pdf"></i> Thesis Document Preview</h1>
+        <div class="preview-actions">
+            <button class="btn btn-secondary" onclick="togglePositionGuides()">
+                <i class="fas fa-ruler"></i> Guides
+            </button>
+            <button class="btn btn-secondary" onclick="toggleSafeZone()">
+                <i class="fas fa-square"></i> Safe Zone
+            </button>
+            <button class="btn btn-secondary" onclick="window.print()">
+                <i class="fas fa-print"></i> Print
+            </button>
+            <button class="btn btn-primary" onclick="window.close()">
+                <i class="fas fa-times"></i> Close Preview
+            </button>
+        </div>
+    </div>
+
+    <!-- Preview Container -->
+    <div class="preview-container">
+        <!-- Preview Toolbar -->
+        <div class="preview-toolbar">
+            <div class="page-controls">
+                <button class="btn btn-secondary" onclick="zoomOut()">
+                    <i class="fas fa-search-minus"></i>
+                </button>
+                <span class="page-info" id="zoomLevel">100%</span>
+                <button class="btn btn-secondary" onclick="zoomIn()">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <button class="btn btn-secondary" onclick="toggleBorders()">
+                    <i class="fas fa-border-style"></i> Toggle Borders
+                </button>
+            </div>
+            <div class="page-info">
+                Page 1 of 1
+            </div>
+        </div>
+
+        <!-- Preview Content -->
+        <div class="preview-content" id="previewContent">
+            <!-- Document Page -->
+            <div class="document-page" id="documentPage">
+                <!-- Border Lines - THINNER SOLID BLACK -->
+                <div class="border-line top"></div>
+                <div class="border-line top-2"></div>
+                <div class="border-line bottom"></div>
+                <div class="border-line left"></div>
+                <div class="border-line right"></div>
+                <div class="border-line right-inside-1"></div>
+                <div class="border-line right-inside-2"></div>
+
+                <!-- Position Guides -->
+                <div class="position-guide line-1-guide" id="line1Guide"></div>
+                <div class="position-guide line-2-guide" id="line2Guide"></div>
+
+                <!-- Content Safe Zone - NO GREEN BACKGROUND -->
+                <div class="content-safe-zone" id="safeZone"></div>
+
+                <!-- University Header between top borders - UPDATED INDENTATION -->
+                <div class="header-section">
+                    <img src="../images/tcu.png" class="logo-left" alt="TCU Logo" 
+                         onerror="this.style.display='none'">
+                    <div class="university-header">TAGUIG CITY UNIVERSITY</div>
+                    <img src="../images/cict.png" class="logo-right" alt="CICT Logo"
+                         onerror="this.style.display='none'">
+                </div>
+
+                <!-- Document Content -->
+                <div class="document-content" id="documentContent">
+                    <!-- Thesis Title Section -->
+                    <div class="thesis-title">
+                        <h1 id="thesisTitle">A WEB-BASED LEARNING MANAGEMENT SYSTEM WITH MOBILE APPLICATION FOR TAGUIG CITY UNIVERSITY</h1>
+                    </div>
+
+                    <!-- Quote Section -->
+                    <div class="thesis-quote">
+                        <!-- First Section -->
+                        <div class="first-section">
+                            <div class="quote-line">A Thesis Presented to the Course Specialists</div>
+                            <div class="quote-line">of the College of Information and Communication Technology</div>
+                            <div class="quote-line">of Taguig City University</div>
+                        </div>
+                        
+                        <!-- Second Section -->
+                        <div class="second-section">
+                            <div class="quote-line">In Partial Fulfillment of the Requirements for the Degree</div>
+                            <div class="quote-line">of Bachelor of Science in Computer Science</div>
+                        </div>
+                    </div>
+
+                    <!-- Group Members with "By" -->
+                    <div class="group-members">
+                        <div class="by-section">
+                            <div class="by-text">By:</div>
+                        </div>
+                        <div class="group-member" id="group1">Group Number 1</div>
+                        <div class="group-member" id="group2">Group Number 2</div>
+                        <div class="group-member" id="group3">Group Number 3</div>
+                        <div class="group-member" id="group4">Group Number 4</div>
+                    </div>
+
+                    <!-- Submission Date -->
+                    <div class="submission-date">
+                        <p id="submissionDate">Month Year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get URL parameters for formatting
+        const urlParams = new URLSearchParams(window.location.search);
+        let bordersVisible = true;
+        let safeZoneVisible = false;
+        let guidesVisible = true;
+
+        // Apply formatting from URL parameters
+        function applyFormatting() {
+            const documentContent = document.getElementById('documentContent');
+            
+            console.log('Applying formatting from URL parameters:', Object.fromEntries(urlParams.entries()));
+            
+            // Font Family
+            const fontFamily = urlParams.get('fontFamily') || 'Times New Roman, serif';
+            documentContent.style.fontFamily = fontFamily;
+            console.log('Font Family:', fontFamily);
+            
+            // Font Size
+            const fontSize = urlParams.get('fontSize') || '12';
+            documentContent.style.fontSize = fontSize + 'pt';
+            console.log('Font Size:', fontSize + 'pt');
+            
+            // Text Alignment
+            const textAlign = urlParams.get('textAlign') || 'left';
+            documentContent.style.textAlign = textAlign;
+            console.log('Text Alignment:', textAlign);
+            
+            // Indentation
+            const indent = urlParams.get('indent') || '0.5';
+            documentContent.style.textIndent = indent + 'in';
+            console.log('Indentation:', indent + 'in');
+            
+            // Border
+            const borderEnabled = urlParams.get('borderEnabled') === 'true';
+            const documentPage = document.getElementById('documentPage');
+            if (borderEnabled) {
+                documentPage.style.border = '1px solid #000';
+                console.log('Border: Enabled');
+            } else {
+                console.log('Border: Disabled');
+            }
+            
+            // Logo Position
+            const logoPosition = urlParams.get('logoPosition') || 'top-center';
+            updateLogoPosition(logoPosition);
+            console.log('Logo Position:', logoPosition);
+            
+            // Show/Hide borders
+            const showBorders = urlParams.get('showBorders') !== 'false';
+            bordersVisible = showBorders;
+            updateBorderVisibility();
+            
+            console.log('✅ Formatting applied successfully');
+            console.log('📏 University Header Indentation:');
+            console.log('   • Left: 0.98"');
+            console.log('   • Right: 0.92"');
+        }
+        
+        function updateLogoPosition(position) {
+            const leftLogo = document.querySelector('.logo-left');
+            const rightLogo = document.querySelector('.logo-right');
+            const universityHeader = document.querySelector('.university-header');
+            
+            // Reset all
+            leftLogo.style.display = 'flex';
+            rightLogo.style.display = 'flex';
+            universityHeader.style.margin = '0';
+            
+            switch(position) {
+                case 'top-left':
+                    rightLogo.style.display = 'none';
+                    universityHeader.style.marginRight = 'auto';
+                    break;
+                case 'top-center':
+                    // Default - both logos visible
+                    break;
+                case 'top-right':
+                    leftLogo.style.display = 'none';
+                    universityHeader.style.marginLeft = 'auto';
+                    break;
+                case 'none':
+                    leftLogo.style.display = 'none';
+                    rightLogo.style.display = 'none';
+                    break;
+            }
+        }
+        
+        function toggleBorders() {
+            bordersVisible = !bordersVisible;
+            updateBorderVisibility();
+        }
+        
+        function toggleSafeZone() {
+            safeZoneVisible = !safeZoneVisible;
+            const safeZone = document.getElementById('safeZone');
+            if (safeZoneVisible) {
+                safeZone.style.backgroundColor = 'rgba(0, 255, 0, 0.05)';
+                safeZone.style.border = '1px solid rgba(0, 255, 0, 0.3)';
+            } else {
+                safeZone.style.backgroundColor = 'transparent';
+                safeZone.style.border = 'none';
+            }
+        }
+        
+        function togglePositionGuides() {
+            guidesVisible = !guidesVisible;
+            const line1Guide = document.getElementById('line1Guide');
+            const line2Guide = document.getElementById('line2Guide');
+            line1Guide.style.display = guidesVisible ? 'block' : 'none';
+            line2Guide.style.display = guidesVisible ? 'block' : 'none';
+        }
+        
+        function updateBorderVisibility() {
+            const borderLines = document.querySelectorAll('.border-line');
+            borderLines.forEach(line => {
+                line.style.display = bordersVisible ? 'block' : 'none';
+            });
+        }
+        
+        // Zoom functionality
+        let zoomLevel = 1;
+        
+        function zoomIn() {
+            if (zoomLevel < 2) {
+                zoomLevel += 0.1;
+                updateZoom();
+            }
+        }
+        
+        function zoomOut() {
+            if (zoomLevel > 0.5) {
+                zoomLevel -= 0.1;
+                updateZoom();
+            }
+        }
+        
+        function updateZoom() {
+            const previewContent = document.getElementById('previewContent');
+            previewContent.style.transform = `scale(${zoomLevel})`;
+            document.getElementById('zoomLevel').textContent = Math.round(zoomLevel * 100) + '%';
+        }
+        
+        // Initialize the preview
+        window.onload = function() {
+            applyFormatting();
+            
+            // Check if we're in print mode
+            if (window.location.search.includes('print=true')) {
+                window.print();
+            }
+        };
+        
+        // Handle print event
+        window.addEventListener('beforeprint', function() {
+            // Hide borders, safe zone, and guides before printing
+            const borderElements = document.querySelectorAll('.border-line, .content-safe-zone, .position-guide');
+            borderElements.forEach(element => {
+                element.style.display = 'none';
+            });
+        });
+        
+        window.addEventListener('afterprint', function() {
+            // Restore visibility after printing
+            updateBorderVisibility();
+            if (guidesVisible) {
+                const line1Guide = document.getElementById('line1Guide');
+                const line2Guide = document.getElementById('line2Guide');
+                line1Guide.style.display = 'block';
+                line2Guide.style.display = 'block';
+            }
+        });
+        
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey || e.metaKey) {
+                switch(e.key) {
+                    case '=':
+                    case '+':
+                        e.preventDefault();
+                        zoomIn();
+                        break;
+                    case '-':
+                        e.preventDefault();
+                        zoomOut();
+                        break;
+                    case '0':
+                        e.preventDefault();
+                        zoomLevel = 1;
+                        updateZoom();
+                        break;
+                    case 'b':
+                        e.preventDefault();
+                        toggleBorders();
+                        break;
+                    case 'z':
+                        e.preventDefault();
+                        toggleSafeZone();
+                        break;
+                    case 'g':
+                        e.preventDefault();
+                        togglePositionGuides();
+                        break;
+                }
+            }
+            
+            // Escape key to close preview
+            if (e.key === 'Escape') {
+                window.close();
+            }
+        });
+    </script>
+</body>
+</html>

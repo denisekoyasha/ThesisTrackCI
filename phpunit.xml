@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+         cacheDirectory=".phpunit.cache"
+         displayDetailsOnTestsThatTriggerDeprecations="true"
+         displayDetailsOnTestsThatTriggerWarnings="true">
+
+    <testsuites>
+        <!-- Organized test suites by category -->
+        <testsuite name="Unit">
+            <file>tests/UtilityFunctionsTest.php</file>
+            <file>tests/DatabaseTest.php</file>
+            <file>tests/SessionManagementTest.php</file>
+        </testsuite>
+        <testsuite name="Authentication">
+            <file>tests/AuthTest.php</file>
+            <file>tests/LoginTest.php</file>
+            <file>tests/RegistrationTest.php</file>
+        </testsuite>
+        <!-- Removed non-existent LoginServiceTest.php from Features suite -->
+        <testsuite name="Features">
+            <file>tests/FileUploadTest.php</file>
+        </testsuite>
+        <testsuite name="All">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <!-- Add source coverage configuration -->
+    <source>
+        <include>
+            <directory suffix=".php">.</directory>
+        </include>
+        <exclude>
+            <directory>vendor</directory>
+            <directory>tests</directory>
+            <directory>uploads</directory>
+        </exclude>
+    </source>
+
+    <php>
+        <!-- Database environment variables -->
+        <env name="DB_HOST" value="127.0.0.1"/>
+        <env name="DB_NAME" value="thesis_track"/>
+        <env name="DB_USER" value="root"/>
+        <env name="DB_PASS" value=""/>
+        <!-- Add PHPUNIT_RUNNING constant for test detection -->
+        <const name="PHPUNIT_RUNNING" value="true"/>
+    </php>
+
+    <!-- Configure logging for CI -->
+    <logging>
+        <testdoxHtml outputFile=".phpunit.cache/testdox.html"/>
+    </logging>
+</phpunit>
