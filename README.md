@@ -1,1 +1,1 @@
-CI check trigger for GitHub Actions.
+1CI check trigger for GitHub Actions.
